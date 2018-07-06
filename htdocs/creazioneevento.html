@@ -1,6 +1,22 @@
 <!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <a href="home.html">Torna alla home</a><br>
+        
+                <h2>Creazione evento</h2>
+                <form action="creazioneevento.php" method="post">
 
-evento3
-evento4
-evento5
-evento8
+                    Titolo <input type="text" name="titolo" required><br>
+                    Data <input type="date" name="data" required><br>
+                    Luogo <input type="text" name="luogo" required><br>
+                    Genere <input type="text" name="genere" required><br>
+                    <button type="submit">Crea evento</button>
+                    
+                </form>
+        
+    </body>
+</html>

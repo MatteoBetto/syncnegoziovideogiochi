@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <a href="home.html">Torna alla home</a><br>
+        <table>
+            <td>
+                <h2>Ricerca Videogiochi</h2>
+                <form action="ricerca.php" method="post">
+                    <input type="hidden" name="tipo" value="ricercavideogioco">
+                    Titolo <input type="text" name="titolo"><br>
+                    Piattaforma <input type="text" name="piattaforma"><br>
+                    Genere <input type="text" name="genere"><br>
+                    Condizione <select name="condizione">
+                        <option value="nuovo">Nuovo</option> 
+                        <option value="ottimo">Ottimo</option>
+                        <option value="buono">Buono</option>
+                        <option value="discreto">Discreto</option>
+                    </select><br>
+                    Prezzo <input type="text" name="prezzo" pattern="[0-9]+"><br>
+                    Quantità <input type="number" name="quantita"><br>
+                    Data di uscita <input type="date" name="datauscita"><br>
+                    <button type="submit">Ricerca gioco</button>
+                </form>
+            </td>
+            
+            <td>
+            <h2>Prenotazione Console</h2>
+            <form action="prenotazione.php" method="post">
+                    <input type="hidden" name="tipo" value="prenotazioneconsole">
+                    Nome <input type="text" name="nome" required><br>
+                    Modello <input type="text" name="modello" required><br>
+                    Produttore <input type="text" name="produttore" required><br>
+                    Data di uscita <input type="date" name="datauscita" required><br>
+                    <button type="submit">Aggiungi console</button>
+                </form>
+            </td>
+        </table>
+    
+    
+    </body>
+</html>

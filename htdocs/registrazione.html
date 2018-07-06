@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="it">
+    <head></head>
+    <body>
+        <a href="index.html">Torna indietro</a><br>
+        <form action="registrazione.php" method="post">
+            <label>CF: </label>
+            <input type='text' name='CF'><br>
+            <label>Password: </label>
+            <input type='text' name='password'><br>
+            <label>Nome: </label>
+            <input type='text' name='nome'><br>
+            <label>Cognome: </label>
+            <input type='text' name='cognome'><br>
+            <label>Telefono: </label>
+            <input type='tel' name='telefono' pattern="[0-9]+"><br>
+            <label>Indirizzo: </label>
+            <input type='text' name='indirizzo'><br>
+            <label>Data di nascita: </label>
+            <input type='date' name='datanascita' pattern="[0-9]{2}/[0-9]{2}/[1][0-9]{3}"><br>
+            
+            <button type="submit">invia</button>
+        
+        </form>
+        
+    
+    </body>
+</html>

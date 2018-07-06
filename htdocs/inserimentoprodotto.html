@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <a href="home.html">Torna alla home</a><br>
+        <table>
+            <td>
+                <h2>Videogiochi</h2>
+                <form action="inserimentoprodotto.php" method="post">
+                    <input type="hidden" name="tipo" value="videogioco">
+                    Titolo <input type="text" name="titolo" required><br>
+                    Piattaforma <input type="text" name="piattaforma" required><br>
+                    Genere <input type="text" name="genere" required><br>
+                    Condizione <select name="condizione" required>
+                        <option value="nuovo" selected>Nuovo</option> 
+                        <option value="ottimo">Ottimo</option>
+                        <option value="buono">Buono</option>
+                        <option value="discreto">Discreto</option>
+                    </select><br>
+                    Prezzo <input type="text" name="prezzo" pattern="[0-9]+" required><br>
+                    Quantità <input type="number" name="quantita" required><br>
+                    Data di uscita <input type="date" name="datauscita" required><br>
+                    <button type="submit">Aggiungi gioco</button>
+                </form>
+            </td>
+            
+            <td>
+            <h2>Console</h2>
+            <form action="inserimentoprodotto.php" method="post">
+                    <input type="hidden" name="tipo" value="console">
+                    Nome <input type="text" name="nome" required><br>
+                    Modello <input type="text" name="modello" required><br>
+                    Produttore <input type="text" name="produttore" required><br>
+                    Condizione <select name="condizione" required>
+                        <option value="nuovo" selected>Nuovo</option> 
+                        <option value="ottimo">Ottimo</option>
+                        <option value="buono">Buono</option>
+                        <option value="discreto">Discreto</option>
+                    </select><br>
+                    Prezzo <input type="text" name="prezzo" pattern="[0-9]+" required><br>
+                    Quantità <input type="number" name="quantita" required><br>
+                    Data di uscita <input type="date" name="datauscita" required><br>
+                    <button type="submit">Aggiungi console</button>
+                </form>
+            </td>
+        </table>
+    
+    
+    </body>
+</html>

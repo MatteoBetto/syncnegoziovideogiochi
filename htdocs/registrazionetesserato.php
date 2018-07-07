@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $con = pg_connect("host=localhost port=5432 dbname=negoziovideogiochi  user=postgres password=unimi");
     if(!$con){
       echo "Errore nella connessione al database: ".pg_last_error($con);

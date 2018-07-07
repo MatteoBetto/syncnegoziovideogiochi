@@ -17,7 +17,6 @@
         $quantita = pg_escape_string($_POST["quantita"]);
         $datauscita = pg_escape_string($_POST["datauscita"]);
     
-        //$query = "SET datestyle = dmy; INSERT INTO videogioco (titolo,piattaforma,genere,condizione,prezzo,quantita,datauscita) VALUES ('".$titolo."','".$piattaforma."','".$genere."','".$condizione."','".$prezzo."','".$quantita."','".$datauscita."');";
         $query = "SET datestyle = dmy; INSERT INTO videogioco (titolo,piattaforma,genere,condizione,prezzo,quantita,datauscita) VALUES ('".$titolo."','".$piattaforma."','".$genere."','".$condizione."','".$prezzo."','".$quantita."','".$datauscita."')
 ON CONFLICT (titolo,piattaforma,condizione) DO UPDATE SET quantita = videogioco.quantita + ".$quantita."";
             
@@ -31,7 +30,7 @@ ON CONFLICT (titolo,piattaforma,condizione) DO UPDATE SET quantita = videogioco.
         $quantita = pg_escape_string($_POST["quantita"]);
         $datauscita = pg_escape_string($_POST["datauscita"]);
         
-        //$query = "SET datestyle = dmy; INSERT INTO console (nome,modello,produttore,condizione,prezzo,quantita,datauscita) VALUES ('".$nome."','".$modello."','".$produttore."','".$condizione."','".$prezzo."','".$quantita."','".$datauscita."');";
+     
         $query = "SET datestyle = dmy; INSERT INTO console (nome,modello,produttore,condizione,prezzo,quantita,datauscita) VALUES ('".$nome."','".$modello."','".$produttore."','".$condizione."','".$prezzo."','".$quantita."','".$datauscita."')
 ON CONFLICT (nome,modello,condizione) DO UPDATE SET quantita = console.quantita + ".$quantita."";
     }
@@ -43,9 +42,5 @@ ON CONFLICT (nome,modello,condizione) DO UPDATE SET quantita = console.quantita 
     }else{
         header("Location:home.html");
     }
-    
-
-    
-
     
 ?>

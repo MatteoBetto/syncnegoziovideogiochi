@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        
+    </head>
+    <body>
+        <a href="home.html">Torna alla home</a><br>
+
+        <h2>Acquista prodotto</h2>                
+
+        <select id="tipo" name="tipoprodotto">
+            <option value="videogioco">Videogioco</option> 
+            <option value="console">Console</option>
+        </select>    
+        <input type="text" id="codiceprodotto" name="codiceprodotto" placeholder="Codice prodotto">    
+        <input type="button" id="add" value="Aggiungi al carrello">
+
+        <hr>
+        <form id="carrello" action="registrazioneacquisto.php" method="post">
+            <input type="submit" value="Acquista">
+        <form>
+
+        <script>
+            count=0;
+            //Defining a listener for our button, specifically, an onclick handler
+            document.getElementById("add").onclick = function() {
+            //First things first, we need our text:
+            var codice = document.getElementById("codiceprodotto").value; //.value gets input values
+            var tipo = document.getElementById("tipo").value;
+          
+
+            //Now construct a quick list element
+            var prodotto = '<input type="text" name="prodotto'+count+'" value="'+codice+'"\" readonly><input type="text" name="tipo'+count+'" value="'+tipo+'"\" readonly><br>';
+            document.getElementById("carrello").insertAdjacentHTML('afterbegin', prodotto);
+            count++;
+            //Now use appendChild and add it to the list!
+            //document.getElementById("carrello").appendChild(li);
+        }
+        </script>
+    </body>
+</html>

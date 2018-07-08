@@ -13,11 +13,9 @@
         $piattaforma = pg_escape_string($_POST["piattaforma"]);
         $genere = pg_escape_string($_POST["genere"]);
         $condizione = pg_escape_string($_POST["condizione"]);
-        $prezzo = pg_escape_string($_POST["prezzo"]);
-        $quantita = pg_escape_string($_POST["quantita"]);
-        $datauscita = pg_escape_string($_POST["datauscita"]);
+        
             
-        $query = "SET datestyle = dmy; SELECT titolo,piattaforma,genere,condizione,prezzo,quantita,datauscita FROM videogioco WHERE titolo LIKE '%".$titolo."%' AND piattaforma LIKE '%".$piattaforma."%' AND genere LIKE '%".$genere."%' AND condizione LIKE '%".$condizione."%' AND prezzo = '".$prezzo."' AND quantita = '".$quantita."' AND datauscita = '".$datauscita."';";
+        $query = "SET datestyle = dmy; SELECT titolo,piattaforma,genere,condizione,prezzo,quantita,datauscita FROM videogioco WHERE titolo LIKE '%".$titolo."%' AND piattaforma LIKE '%".$piattaforma."%' AND genere LIKE '%".$genere."%' AND condizione LIKE '%".$condizione."%';";
                  
         $query_res = pg_query($con, $query);
         echo $query;
@@ -60,11 +58,9 @@
         $modello = pg_escape_string($_POST["modello"]);
         $produttore = pg_escape_string($_POST["produttore"]);
         $condizione = pg_escape_string($_POST["condizione"]);
-        $prezzo = pg_escape_string($_POST["prezzo"]);
-        $quantita = pg_escape_string($_POST["quantita"]);
-        $datauscita = pg_escape_string($_POST["datauscita"]);
+
         
-        $query = "SET datestyle = dmy; SELECT nome,modello,produttore,condizione,prezzo,quantita,datauscita FROM console WHERE nome LIKE '%".$nome."%' AND modello LIKE '%".$modello."%' AND produttore LIKE '%".$produttore."%' AND condizione LIKE '%".$condizione."%' AND prezzo = '".$prezzo."' AND quantita = '".$quantita."' AND datauscita = '".$datauscita."';";
+        $query = "SET datestyle = dmy; SELECT nome,modello,produttore,condizione,prezzo,quantita,datauscita FROM console WHERE nome LIKE '%".$nome."%' AND modello LIKE '%".$modello."%' AND produttore LIKE '%".$produttore."%' AND condizione LIKE '%".$condizione."%';";
         
        $query_res = pg_query($con, $query);
         echo $query;
